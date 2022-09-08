@@ -65,11 +65,13 @@ function getSimilarityCoefficient( $item1, $item2, $separator = "," ) {
     echo "Proses Memasukan Kedalam Vektor----<br><br>";
     echo "Mengihutng Nilai Kedekatan Vektor Dari text1 dan text2<br>";
     $coefficient = count( $arr_intersection ) / count( $arr_union );
-    var_dump($coefficient);
+    var_dump(number_format($coefficient,2));
+    echo "<br>atau<br>";
+    var_dump(number_format($coefficient*100));
     	
 
-	return $coefficient;
+	return $coefficient*100;
 }
 
 
-echo "<br><br>Perbandingan similarity Euclidean Distance <b>".$_GET['txt1']."</b> dan <b>".$_GET['txt2']."</b> Adalah ".getSimilarityCoefficient( $_GET['txt1'], $_GET['txt2'], " " );
+echo "<br><br>Perbandingan similarity Euclidean Distance <b>".$_GET['txt1']."</b> dan <b>".$_GET['txt2']."</b> Adalah <b>".number_format(getSimilarityCoefficient( $_GET['txt1'], $_GET['txt2'], " " ),2)." Persen";

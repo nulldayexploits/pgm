@@ -1,4 +1,4 @@
-<h2>Analisis Perhitungan Euclidean Distance</h2>
+<h2>Analisis Perhitungan Cosine Similarity</h2>
 <form method="get" action="">
     Text 1 <input type="text" name="txt1" value="<?php echo $_GET['txt1']; ?>"><br>
     Text 2 <input type="text" name="txt2" value="<?php echo $_GET['txt2']; ?>"><br>

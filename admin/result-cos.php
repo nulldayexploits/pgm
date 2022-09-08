@@ -177,7 +177,7 @@
 
     $articles = array();
     $i=0;
-    $dt = mysqli_query($mysqli, "SELECT * FROM tdokumen WHERE id_user = $_SESSION[id_user] ORDER BY RAND() LIMIT 1");
+    $dt = mysqli_query($mysqli, "SELECT * FROM tdokumen WHERE id_user = $_SESSION[id_user]");
     while($data = mysqli_fetch_array($dt)){
 
         $judul = $casefolding->casefol($data['judul']);
